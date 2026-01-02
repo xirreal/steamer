@@ -1,0 +1,15 @@
+[package]
+name = "steamer"
+version = "0.1.0"
+edition = "2024"
+description = "A CLI tool to create desktop shortcuts for Steam games"
+license = "MIT"
+repository = "https://github.com/xirreal/steamer"
+keywords = ["steam", "desktop", "launcher", "linux"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+regex = "1.10"
+dirs = "6.0"
+clap = { version = "4.4", features = ["derive"] }
+anyhow = "1.0"
