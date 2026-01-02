@@ -13,6 +13,32 @@ If you have Cargo installed, you can install Steamer by running:
 ```bash
 cargo install steamer
 ```
+## How to use
+
+Open Steam, add the desired Steam libraries in the settings. Navigate to the Library page to cache all the app icons which will be used. Then just run:
+
+The default parameters have been tested on a non-flatpak install of Linux on Fedora, with libraries spanning 4 different drives, 3 of which are NTFS.
+Steamer also offers several ways to tweak the games that will be skipped:
+```bash
+% steamer -h
+Usage: steamer [OPTIONS]
+
+Options:
+  -d, --dry-run
+          Run without writing files to disk, only discovering applications
+  -s, --steam-path <STEAM_PATH>
+          Path to Steam installation (defaults to ~/.local/share/Steam)
+  -a, --app-dir <APP_DIR>
+          Path to applications directory (defaults to ~/.local/share/applications)
+  -k, --skip-keywords <SKIP_KEYWORDS>
+          Comma separated list of keywords to skip (defaults to Proton,Steam Linux Runtime,Steamworks,Common Redistributables,SteamVR,Dedicated Server,Soundtrack)
+  -i, --ignored-app-ids <IGNORED_APP_IDS>
+          Comma separated list of app IDs to skip (defaults to 480)
+  -h, --help
+          Print help
+  -V, --version
+          Print version
+```
 
 ## How to build from source
 1. Install Rust and Cargo. 
